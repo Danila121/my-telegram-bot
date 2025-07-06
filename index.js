@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const mySql = require("mysql2");
+const startBot = require('./bot');
 const port = 3000;
+
+startBot();
 
 app.get('/', (req, res) => {
   res.send('<h1>Привет, октагон!</h1>');
